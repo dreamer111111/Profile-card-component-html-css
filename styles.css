@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap");
+
+:root {
+  --blue-600: hsl(185, 75%, 39%);
+  --navy-950: hsl(229, 23%, 23%);
+  --gray-500: hsl(227, 10%, 46%);
+
+  --gray-100: hsl(225, 10%, 92%);
+
+  --ff-kumbh: "Kumbh Sans", sans-serif;
+  --fs-stats: 1.125rem;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-kumbh);
+  font-size: var(--fs-stats);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  /* New for me two background image */
+  background:
+    url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position:
+    right 52vw bottom 35vh,
+    left 48vw top 52vh;
+    background-color: var(--blue-600);
+}
+.card {
+  max-width: 22rem;
+  width: 100%;
+  background-color: var(--gray-100);
+  overflow: hidden;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 3.125rem 6.25rem -1.25rem rgba(8, 70, 94, 0.5);
+}
+
+.card__header {
+  position: relative;
+  height: 9rem;
+}
+.card-bg {
+  width: 100%;
+  display: block;
+}
+.profile-img {
+  border: 5px solid var(--gray-100);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+.card__body {
+  padding: 4.5rem 1.5rem 1.5rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+.name {
+  font-size: var(--fs-stats);
+  font-weight: 700;
+  color: var(--navy-950);
+}
+.age {
+  font-weight: 400;
+  font-size: var(--fs-stats);
+  margin-left: 0.5rem;
+  color: var(--gray-500);
+}
+.location {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  letter-spacing: 0.063rem;
+}
+.card__stats {
+  padding: 1.5rem;
+}
+.stats-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.stats-list li {
+  display: flex;
+  flex-direction: column;
+}
+.stats-val {
+  display: block;
+  color: var(--navy-950);
+  font-size: 1.125rem;
+}
+.stats-label {
+  display: block;
+  color: var(--gray-500);
+  font-size: 0.625rem;
+  letter-spacing: 0.095rem;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
